@@ -65,15 +65,13 @@ export const navItems = [
         titleClassName: "text-xl text-center text-neutral-800",
         img: "",
         spareImg: "",
-      }
-      
-      
+      },      
   ];
   
   export const projects = [
     {
       id: 1,
-      title: "BGV Labs: A Virtual 3D Web Application for Machine Shop Training",
+      title: "Web CMS for 3D Virtual Labs",
       des: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
       img: "/p1.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
@@ -81,15 +79,23 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Slimodoro: A Pomodoro Timer Application for Boosting Productivity",
+      title: "Web Centralized Vendor Management Repository",
+      des: "Manage Vendors with a web application using React, Tailwind, and, Springboot.",
+      img: "/p3.svg",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      link: "https://github.com/jakwesoneil/gvendor",
+    },
+    {
+      id: 3,
+      title: "Android Pomodoro Timer Application ",
       des: "Boost your productivity with an android pomodoro timer application using Flutter. ",
       img: "/p2.svg",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
       link: "https://play.google.com/store/apps/details?id=com.application.slimodoro",
     },
     {
-      id: 3,
-      title: "SANA Shelter: A Web Pet Adoption Application for Dog Lovers",
+      id: 4,
+      title: "Web Pet Adoption Application for Dog Lovers",
       des: "Manage your pet adoption with a web application using JS and PHP.",
       img: "/p3.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
@@ -98,7 +104,38 @@ export const navItems = [
     
   ];
   
-
+  /*export const testimonials = [
+    {
+      quote:
+        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      name: "Michael Johnson",
+      title: "Director of AlphaStream Technologies",
+    },
+    {
+      quote:
+        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      name: "Michael Johnson",
+      title: "Director of AlphaStream Technologies",
+    },
+    {
+      quote:
+        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      name: "Michael Johnson",
+      title: "Director of AlphaStream Technologies",
+    },
+    {
+      quote:
+        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      name: "Michael Johnson",
+      title: "Director of AlphaStream Technologies",
+    },
+    {
+      quote:
+        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      name: "Michael Johnson",
+      title: "Director of AlphaStream Technologies",
+    },
+  ];*/
   
   export const companies = [
     {

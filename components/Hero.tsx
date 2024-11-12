@@ -21,7 +21,7 @@ const Hero = () => {
         lg:max-w-[60vw] flex flex-col items-center justify-center"
         >
           <h3 className="text-blue-100 uppercase tracking-widest text-xs text-center max-w-80">
-            Created by Jacques Oneil Gonzalez
+            Aspiring Software Engineer
           </h3>
 
           <TextGenerateEffect
@@ -32,7 +32,7 @@ const Hero = () => {
             className="text-center text-blue-100 dark:text-blue-100
             md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-3"
           >
-            I&apos;m Oneil, a Frontend Developer based in Philippines
+            I&apos;m Jacques Oneil Gonzalez, an IT Student specializing on App Development at Mapúa University.
           </p>
           <a href = '#projects'>
             <MagicButton 
