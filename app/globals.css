@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.heading {
+  @apply font-bold text-4xl md:text-5xl text-center text-blue-50;
+}
 /*
 :root {
   --background: #ffffff;
