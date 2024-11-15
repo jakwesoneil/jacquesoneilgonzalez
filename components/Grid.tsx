@@ -6,11 +6,11 @@ import { gridItems } from '@/data';
 
 const Grid = () => {
   return (
-    <section id="about" className="pt-20 pb-32">
+    <section id="about" className="pt-20 pb-20">
       <BentoGrid>
         {gridItems.map((item) => (
           <BentoGridItem
-            className={item.id === 1 ? "text-blue-950" : item.className}
+            className={item.id === 1 ? " text-blue-950 flex items-center justify-center" : item.className}
             id={item.id}
             key={item.id}
             title={item.title}

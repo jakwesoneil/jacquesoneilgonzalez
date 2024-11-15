@@ -32,7 +32,7 @@ const Hero = () => {
             className="text-center text-blue-100 dark:text-blue-100
             md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-3"
           >
-            I&apos;m Jacques Oneil Gonzalez, an IT Student specializing on App Development at Mapúa University.
+            I&apos;m Jacques Oneil Gonzalez, driven by a passion for creating seamless web and mobile experiences.
           </p>
           <a href = '#projects'>
             <MagicButton 
