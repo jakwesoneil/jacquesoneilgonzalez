@@ -39,7 +39,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
       imgClassName: "w-full h-full object-cover rounded-lg ",
       titleClassName: "text-xl text-center text-blue-950 font-semibold",
-      techStack: ["/re.svg","/flutter.svg","java.png", "/tail.svg", "/ts.svg"
+      techStack: ["/re.svg","/flutter.svg","java.svg", "/tail.svg", "/ts.svg"
       ],
     },
     {
@@ -150,17 +150,19 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Software Test Engineer Intern",
+      title: "Digital Technology Intern",
       desc: "Integrated 20 automated test cases using Java and mantained an application framework recording using XPath.",
       className: "md:col-span-2",
       thumbnail: "/e2.svg",
+      icon:["/java.svg","/xpath.svg"],
     },
     {
       id: 2,
       title: "Security Researcher Intern",
-      desc: "Developed a PoC for an open-source SIEM, achieving a potential thousands of dollars cost reduction annually by implementing it in AWS using Linux commands, enhancing log tracking and security event analysis.",
+      desc: "Developed a PoC for an open-source SIEM, achieving a potential $50,000 cost reduction annually by implementing it in AWS using Linux commands, enhancing log tracking and security event analysis.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/e1.svg",
+      icon:["/aws.svg","/linux.svg"],
     },
   ];
   
