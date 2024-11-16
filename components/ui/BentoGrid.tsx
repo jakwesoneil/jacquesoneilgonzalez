@@ -30,6 +30,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   onClick,
+  techstack,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -41,11 +42,12 @@ export const BentoGridItem = ({
   titleClassName?: string;
   imgClassName?: string;
   onClick?: () => void;
+  techstack?: React.ReactNode;
 }) => {
   return (
     <div
       className={cn(
-        "relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border border-transparent justify-between flex flex-col space-y-4 bg-white/[0.95] ",
+        "relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border border-transparent justify-between flex flex-col space-y-4 bg-white/[0.95]",
         className
       )}
       onClick={onClick}
@@ -53,7 +55,7 @@ export const BentoGridItem = ({
       {img ? (
         <img
           src={img}
-          alt=""
+          alt="Tech Image"
           className={cn("w-full h-full object-cover", imgClassName)}
         />
       ) : (
@@ -70,6 +72,9 @@ export const BentoGridItem = ({
           </div>
         </>
       )}
+      
+      {/* Render the techstack here */}
+      {techstack && <div className="mt-1 justify-center items-center">{techstack}</div>}
     </div>
   );
 };

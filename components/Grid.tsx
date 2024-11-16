@@ -4,9 +4,10 @@ import React from 'react';
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid';
 import { gridItems } from '@/data';
 
+
 const Grid = () => {
   return (
-    <section id="about" className="pt-20 pb-20">
+    <section id="about" className="pt-10 pb-10">
       <BentoGrid>
         {gridItems.map((item) => (
           <BentoGridItem
@@ -18,8 +19,6 @@ const Grid = () => {
             titleClassName={item.titleClassName}
             imgClassName={item.imgClassName}
             img={item.img}
-
-            // Check for client-side execution for `navigator.clipboard`
             onClick={
               item.id === 6
                 ? () => {
@@ -29,6 +28,19 @@ const Grid = () => {
                   }
                 : undefined
             }
+            // Pass the techstack as a separate component with individual logos
+            techstack={item.id === 4 && item.techStack && (
+              <div className="flex flex-wrap justify-start gap-4 mt-4 overflow-hidden">
+                {item.techStack.map((logo, index) => (
+                  <div
+                    key={index}
+                    className="border border-white/[0.2] rounded-full w-12 h-16 flex justify-center items-center overflow-hidden"
+                  >
+                    <img src={logo} alt="Tech Logo" className="p-1 w-30 h-20 object-contain" />
+                  </div>
+                ))}
+              </div>
+            )}
           />
         ))}
       </BentoGrid>
