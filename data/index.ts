@@ -60,7 +60,7 @@ export const navItems = [
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
       imgClassName: "w-full h-full object-cover rounded-lg ",
-      img: "", // Optional image for this section
+      img: "", 
       onClick: () => navigator.clipboard.writeText("jakwesoneilgonzalez@gmail.com"),
       titleClassName: "text-xl text-center text-blue-50 font-semibold",
       resumeLink:"/Resume-GONZALEZ,JacquesOneil.pdf",
