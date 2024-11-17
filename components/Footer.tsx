@@ -22,7 +22,7 @@ const Footer = () => {
           Do <span className="text-yellow-400"> you</span> have a project in mind?
         </h1>
         <p className="text-center text-white md:mt-10 my-5">
-          Reach out to me and let's create meaningful experiences!
+          Reach out to me and let&apos;s create meaningful experiences!
         </p>
 
         {socialMedia.map((info) => (

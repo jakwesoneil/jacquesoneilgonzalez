@@ -34,7 +34,7 @@ const Grid = () => {
                 {item.techStack.map((logo, index) => (
                   <div
                     key={index}
-                    className="border border-white/[0.2] rounded-full w-12 h-16 flex justify-center items-center overflow-hidden"
+                    className="border border-white/[0.6] rounded-xl w-12 h-12 flex justify-center items-center overflow-hidden"
                   >
                     <img src={logo} alt="Tech Logo" className="p-1 w-30 h-20 object-contain" />
                   </div>
