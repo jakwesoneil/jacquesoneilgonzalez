@@ -18,16 +18,15 @@ export function Button({
   borderClassName,
   duration,
   className,
-  ...otherProps
+
 }: {
   borderRadius?: string;
   children: React.ReactNode;
-  as?: any;
+  as?: React.ElementType;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any;
 }) {
   return (
     <Component
@@ -39,7 +38,6 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
-      {...otherProps}
     >
       <div
         className="absolute inset-0 rounde-[1.75rem]"
@@ -75,15 +73,13 @@ export const MovingBorder = ({
   duration = 2000,
   rx,
   ry,
-  ...otherProps
 }: {
   children: React.ReactNode;
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -113,7 +109,6 @@ export const MovingBorder = ({
         className="absolute h-full w-full"
         width="100%"
         height="100%"
-        {...otherProps}
       >
         <rect
           fill="none"

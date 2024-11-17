@@ -3,7 +3,6 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import { navItems } from "@/data";
-import Image from "next/image";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
