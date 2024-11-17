@@ -45,13 +45,13 @@ const Grid = () => {
             
             // Pass the skill as a string array and display each skill
             skills={item.id === 5 && item.skill && (
-              <div className="flex flex-wrap justify-start gap-4 mt-4 overflow-hidden">
+              <div className="flex justify-center flex-wrap gap-4 mt-4 overflow-hidden items-center">
                 {item.skill.map((skillName, index) => (
                   <div
                     key={index}
-                    className="border border-white/[0.6] rounded-xl p-2 flex justify-center items-center"
+                    className="border border-white/[0.6] rounded-xl px-2 py-1 flex justify-center items-center whitespace-nowrap"
                   >
-                    <span className="text-white">{skillName}</span>
+                    <span className="text-white text-md ">{skillName}</span>
                   </div>
                 ))}
               </div>

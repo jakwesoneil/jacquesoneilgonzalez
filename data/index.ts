@@ -52,7 +52,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
       imgClassName: "w-full h-full object-cover rounded-lg ",
       titleClassName: "text-xl text-center text-blue-50 font-semibold",
-      skill:["Collaboration", "Adaptability", "Active Listening", "Documentation", "Presentation", "Receptive", "Critical Thinking"],
+      skill:["Collaboration", "Adaptability", "Active Listening", "Documentation", "Presentation", "Critical Thinking"],
     },
     {
       id: 6,
