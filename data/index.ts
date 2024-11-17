@@ -9,7 +9,7 @@ export const navItems = [
     {
       id: 1,
       title: "About Me",
-      description: "👋 Hi! I'm Jacques Oneil Gonzalez, a passionate IT student specializing in Application Development at Mapúa University. With a strong foundation in web and mobile development, I thrive on building innovative applications that deliver impactful, user-friendly experiences. My journey into software engineering has fueled my drive to create and continuously improve, from immersive 3D virtual labs using to productivity-enhancing tools. I created numerous applications with different languages and frameworks ranging from Java, React, Flutter, PHP, and Python.",
+      description: "👋 Hi! I'm Jacques Oneil Gonzalez, a passionate IT student specializing in Application Development at Mapúa University. With a strong foundation in web and mobile development, I thrive on building innovative applications that deliver impactful, user-friendly experiences. My journey into software engineering has fueled my drive to create and continuously improve, from immersive 3D virtual labs to productivity-enhancing tools. I created numerous applications with different languages and frameworks ranging from Java, React, Flutter, PHP, and Python.",
       className: "lg:col-span-6 md:col-span-6 md:row-span-6 lg:min-h-[80vh] lg:min-w-[100%] flex items-center justify-center lg:mb-0 md:mb-0",
       imgClassName: "w-full h-full object-cover",
       titleClassName: "text-5xl text-center text-blue-50 font-bold",
