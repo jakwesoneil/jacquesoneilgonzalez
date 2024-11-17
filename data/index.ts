@@ -136,13 +136,13 @@ export const navItems = [
     {
       id: 1,
       name: "McDonald's Philippines",
-      img: "/cloud.svg",
+      img: "/e2.svg",
       nameImg: "/cloudName.svg",
     },
     {
       id: 2,
       name: "Globe Telecom",
-      img: "/app.svg",
+      img: "/e1.svg",
       nameImg: "/appName.svg",
     },
   ];

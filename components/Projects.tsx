@@ -1,6 +1,8 @@
+"use client";
+import dynamic from "next/dynamic";
+const PinContainer = dynamic(() => import("./ui/3d-pin").then((mod) => mod.PinContainer), { ssr: false });
 import { projects } from "@/data";
 import React from "react";
-import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa";
 
 const Projects = () => {
