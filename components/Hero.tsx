@@ -6,14 +6,12 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 min-h-screen">
-      <div>
-        <BackgroundBeams className= "h-full" />
+    <div className="pb-20 pt-36 min-h-screen relative">
+    {/* Full-screen BackgroundBeams */}
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <BackgroundBeams className="h-full w-full" />
       </div>
-      <div className="h-screen w-full bg-white/10 dark:bg-black-900/10 bg-grid-black/[0.2] dark:bg-grid-black/[0.5] flex items-center justify-center absolute top-0 left-0">
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-blue-950 bg-blue-950 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]" />
-      </div>
+      
 
       <div className="flex justify-center relative my-20 z-10">
         <div
@@ -39,7 +37,6 @@ const Hero = () => {
               title="Show my Projects"
               icon ={<FaLocationArrow/>}
               position="right"
-
             />
           </a>
         </div>

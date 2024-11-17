@@ -2,7 +2,7 @@ export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
     { name: "Experience", link: "#experience"},
-    //{ name: "Contact", link: "#contact" },
+    { name: "Contact", link: "#contact" },
   ];
   
   export const gridItems = [
@@ -18,7 +18,7 @@ export const navItems = [
       id: 2,
       title: "",
       description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
+      className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center overflow-hidden",
       imgClassName: "w-full h-full object-contain rounded-xl",
       titleClassName: "hidden",
       img: "/jakwes.jpg",
@@ -170,13 +170,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      target:"https://github.com/jakwesoneil"
     },
     {
       id: 2,
-      img: "/twit.svg",
+      img: "/link.svg",
+      target:"https://www.linkedin.com/in/jacquesoneilgonzalez/"
     },
     {
       id: 3,
-      img: "/link.svg",
+      img: "/gmail.svg",
+      target:"mailto:jakwesoneilgonzalez@gmail.com?subject=Let's%20get%20in%20touch&body=Hi,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
     },
   ];
