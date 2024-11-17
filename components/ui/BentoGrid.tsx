@@ -31,6 +31,8 @@ export const BentoGridItem = ({
   titleClassName,
   onClick,
   techstack,
+  skills,
+  resume,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -43,6 +45,8 @@ export const BentoGridItem = ({
   imgClassName?: string;
   onClick?: () => void;
   techstack?: React.ReactNode;
+  skills?: React.ReactNode;
+  resume?: React.ReactNode;
 }) => {
   return (
     <div
@@ -76,6 +80,8 @@ export const BentoGridItem = ({
       
       {/* Render the techstack here */}
       {techstack && <div className="mt-1 justify-center items-center">{techstack}</div>}
+      {skills && <div className="mt-1 justify-center items-center">{skills}</div>}
+      {resume && <div className="mt-1 justify-center items-center">{resume}</div>}
     </div>
   );
 };

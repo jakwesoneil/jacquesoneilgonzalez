@@ -3,6 +3,7 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid';
 import { gridItems } from '@/data';
+import MagicButton from './ui/MagicButton';
 
 
 const Grid = () => {
@@ -41,6 +42,34 @@ const Grid = () => {
                 ))}
               </div>
             )}
+            
+            // Pass the skill as a string array and display each skill
+            skills={item.id === 5 && item.skill && (
+              <div className="flex flex-wrap justify-start gap-4 mt-4 overflow-hidden">
+                {item.skill.map((skillName, index) => (
+                  <div
+                    key={index}
+                    className="border border-white/[0.6] rounded-xl p-2 flex justify-center items-center"
+                  >
+                    <span className="text-white">{skillName}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+             // Render a clickable link to the resume PDF if there's a resumeLink
+             resume={item.id === 6 && item.resumeLink ? (
+              <MagicButton
+                href={item.resumeLink}
+                target="_blank"
+                icon={""}
+                title="View my Resume"
+                position="left" // or "right", depending on where you want the icon
+              />
+            ) : null}
+            
+                  
+            
           />
         ))}
       </BentoGrid>

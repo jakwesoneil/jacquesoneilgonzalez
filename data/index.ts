@@ -9,7 +9,7 @@ export const navItems = [
     {
       id: 1,
       title: "About Me",
-      description: "👋 Hi! I'm Jacques Oneil Gonzalez, a passionate IT student specializing in Application Development at Mapúa University. With a strong foundation in web and mobile development, I thrive on building innovative applications that deliver impactful, user-friendly experiences. My journey into software engineering has fueled my drive to create and continuously improve, from immersive 3D virtual labs to productivity-enhancing tools. I created numerous applications with different languages and frameworks ranging from Java, React, Flutter, PHP, and Python.",
+      description: "👋 Hi! I'm Jacques Oneil Gonzalez, a passionate IT student specializing in Application Development at Mapúa University. With a strong foundation in web and mobile development, I thrive on building innovative applications that deliver impactful, user-friendly experiences. My journey into software engineering has fueled my drive to create and continuously improve, from immersive 3D virtual labs to productivity-enhancing tools.",
       className: "lg:col-span-6 md:col-span-6 md:row-span-6 lg:min-h-[80vh] lg:min-w-[100%] flex items-center justify-center lg:mb-0 md:mb-0",
       imgClassName: "w-full h-full object-cover",
       titleClassName: "text-5xl text-center text-blue-50 font-bold",
@@ -18,10 +18,13 @@ export const navItems = [
       id: 2,
       title: "",
       description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center overflow-hidden",
-      imgClassName: "w-full h-full object-contain rounded-xl lg:rounded-lg",
-      titleClassName: "hidden",
-      img: "/jakwes.jpg",
+      className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
+      imgClassName: "w-full h-full object-cover rounded-lg ",
+      //className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center overflow-hidden",
+      //imgClassName: "w-full h-full object-contain rounded-xl lg:rounded-lg",
+      //titleClassName: "hidden",
+      img:"toga.jpeg",
+      //img: "/jakwes.jpg",
     },
     {
       id: 3,
@@ -44,11 +47,12 @@ export const navItems = [
     },
     {
       id: 5,
-      title: "Currently building a 3D Virtual Lab CMS",
-      description: "The Inside Scoop",
+      title: "Skills",
+      description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
       imgClassName: "w-full h-full object-cover rounded-lg ",
       titleClassName: "text-xl text-center text-blue-50 font-semibold",
+      skill:["Collaboration", "Adaptability", "Active Listening", "Documentation", "Presentation", "Receptive", "Critical Thinking"],
     },
     {
       id: 6,
@@ -56,9 +60,10 @@ export const navItems = [
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-2 flex items-center justify-center",
       imgClassName: "w-full h-full object-cover rounded-lg ",
-      img: "jakwes.jpg", // Optional image for this section
+      img: "", // Optional image for this section
       onClick: () => navigator.clipboard.writeText("jakwesoneilgonzalez@gmail.com"),
       titleClassName: "text-xl text-center text-blue-50 font-semibold",
+      resumeLink:"/Resume-GONZALEZ,JacquesOneil.pdf",
     },
   ];
   
@@ -151,7 +156,7 @@ export const navItems = [
     {
       id: 1,
       title: "Digital Technology Intern",
-      desc: "Integrated 20 automated test cases using Java and mantained an application framework recording using XPath.",
+      desc: "Integrated 20 automated test cases using Java and maintained an application framework recording using XPath.",
       className: "md:col-span-2",
       thumbnail: "/e2.svg",
       icon:["/java.svg","/xpath.svg"],
