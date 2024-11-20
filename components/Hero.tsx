@@ -3,6 +3,9 @@ import { BackgroundBeams } from "./ui/background-beams";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
+import { navItems } from "@/data";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -12,6 +15,27 @@ const Hero = () => {
         <BackgroundBeams className="h-full w-full" />
       </div>
       
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="bg-blue-950/[0.5] text-white p-3 rounded-xl flex items-center justify-center space-x-4">
+          <img
+            src="/logojakwes.png"
+            alt="Logo"
+            className="h-[40px] w-[40px] min-h-[40px] object-contain pl-4"
+          />
+          {navItems.map((navItem, idx: number) => (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 text-blue-50 dark:hover:text-yellow-400 hover:text-yellow-400"
+              )}
+            >
+              <span className="text-sm !cursor-pointer">{navItem.name}</span>
+            </Link>
+          ))}
+          <div className="pr-1" />
+        </div>
+      </div>
 
       <div className="flex justify-center relative my-20 z-10">
         <div

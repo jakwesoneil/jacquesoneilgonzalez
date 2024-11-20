@@ -7,6 +7,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  
   return (
     <main
       className="relative bg-blue-950 flex
