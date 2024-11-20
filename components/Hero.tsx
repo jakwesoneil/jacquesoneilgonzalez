@@ -16,9 +16,9 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="bg-blue-950/[0.5] text-white p-3 rounded-xl flex items-center justify-center space-x-4">
+        <div className="bg-blue-900/[0.25] text-white p-3 rounded-xl flex items-center justify-center space-x-4">
           <img
-            src="/logojakwes.png"
+            src="/jakweslogo.png"
             alt="Logo"
             className="h-[40px] w-[40px] min-h-[40px] object-contain pl-4"
           />
@@ -48,7 +48,7 @@ const Hero = () => {
 
           <TextGenerateEffect
             className="text-center text-[40px] text-5xl lg:text-6xl text-blue-100 dark:text-blue-100"
-            words="Creating Beautiful User Experiences"
+            words="Creating Seamless User Experiences"
           />
           <p
             className="text-center text-blue-100 dark:text-blue-100
