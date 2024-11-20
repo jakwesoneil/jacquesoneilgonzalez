@@ -142,32 +142,32 @@ export const navItems = [
       id: 1,
       name: "McDonald's Philippines",
       img: "/e2.svg",
-      nameImg: "/cloudName.svg",
     },
     {
       id: 2,
       name: "Globe Telecom",
       img: "/e1.svg",
-      nameImg: "/appName.svg",
     },
   ];
   
   export const workExperience = [
     {
       id: 1,
-      title: "Digital Technology Intern",
-      desc: "Integrated 20 automated test cases using Java and maintained an application framework recording using XPath.",
+      title:  "Security Researcher Intern",
+      desc: "Developed a PoC for an open-source SIEM, achieving a potential $50,000 cost reduction annually by implementing it in AWS using Linux commands, enhancing log tracking and security event analysis.",
       className: "md:col-span-2",
-      thumbnail: "/e2.svg",
-      icon:["/java.svg","/xpath.svg"],
+      thumbnail: "/e1.svg",
+      icon:["/aws.svg","/linux.svg"],
+      skill:["Documentation","Presentation"]
     },
     {
       id: 2,
-      title: "Security Researcher Intern",
-      desc: "Developed a PoC for an open-source SIEM, achieving a potential $50,000 cost reduction annually by implementing it in AWS using Linux commands, enhancing log tracking and security event analysis.",
+      title: "Digital Technology Intern",
+      desc: "Integrated 20 automated test cases using Java and maintained an application framework recording using XPath.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/e1.svg",
-      icon:["/aws.svg","/linux.svg"],
+      thumbnail: "/e2.svg",
+      icon:["/java.svg","/xpath.svg"],
+      skill:["Testing","Critical Thinking"]
     },
   ];
   
