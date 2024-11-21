@@ -44,7 +44,7 @@ const Experience = () => {
                       {card.skill.map((skill, index) => (
                         <div
                           key={index}
-                          className="bg-blue-200 text-blue-950 dark:bg-blue-900 dark:text-white px-2 py-1 rounded-full text-sm"
+                          className="bg-blue-950 text-yellow-400 dark:bg-blue-900 dark:text-white px-2 py-1 rounded-full text-sm"
                         >
                           {skill}
                         </div>
