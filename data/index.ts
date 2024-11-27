@@ -158,7 +158,8 @@ export const navItems = [
       className: "md:col-span-2",
       thumbnail: "/e1.svg",
       icon:["/aws.svg","/linux.svg"],
-      skill:["Software Implementation","Documentation"]
+      companyName: "Globe Telecom",
+      skill:["Software Implementation"]
     },
     {
       id: 2,
@@ -167,6 +168,7 @@ export const navItems = [
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/e2.svg",
       icon:["/java.svg","/xpath.svg"],
+      companyName: "McDo Philippines",
       skill:["Testing","Automation"]
     },
   ];

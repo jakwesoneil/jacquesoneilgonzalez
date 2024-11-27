@@ -16,8 +16,8 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-  <div className="bg-blue-950/[0.25] p-3 rounded-xl flex items-center justify-center space-x-4">
-    <div className="flex items-center justify-center rounded-lg bg-transparent h-[25px] w-[25px] overflow-hidden">
+  <div className="bg-blue-950/[0.4] p-3 rounded-xl flex items-center justify-center space-x-4">
+    <div className="flex items-center justify-center bg-white rounded-sm h-[25px] w-[25px] overflow-hidden outline outline-offset-0 outline-1 outline-white">
       <img
         src="/jakwesoneil_logo.png"
         alt="Logo"
