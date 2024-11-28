@@ -46,7 +46,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-yellow-100",
+              "h-20 w-20 opacity-[0.8] bg-yellow-400",
               borderClassName
             )}
           />
