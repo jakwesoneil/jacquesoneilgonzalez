@@ -21,23 +21,23 @@ const Hero = () => {
       <img
         src="/jakwesoneil_logo.png"
         alt="Logo"
-        className="h-full w-full object-contain "
+        className="h-full w-full object-contain"
       />
-          </div>
-          {navItems.map((navItem, idx: number) => (
-            <Link
-              key={`link=${idx}`}
-              href={navItem.link}
-              className={cn(
-                "relative dark:text-neutral-50 items-center flex space-x-1 text-blue-50 dark:hover:text-yellow-400 hover:text-yellow-400"
-              )}
-            >
-              <span className="text-sm !cursor-pointer">{navItem.name}</span>
-            </Link>
-          ))}
-          <div className="pr-1" />
-        </div>
-      </div>
+    </div>
+    {navItems.map((navItem, idx: number) => (
+      <Link
+        key={`link=${idx}`}
+        href={navItem.link}
+        className={cn(
+          "relative dark:text-neutral-50 items-center flex space-x-1 text-blue-50 dark:hover:text-yellow-400 hover:text-yellow-400"
+        )}
+      >
+        <span className="text-lg">{navItem.name}</span> {/* Only the icon */}
+      </Link>
+    ))}
+    <div className="pr-1" />
+  </div>
+</div>
 
       <div className="flex justify-center relative my-20 z-10">
         <div

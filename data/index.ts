@@ -63,7 +63,7 @@ export const navItems = [
       img: "", 
       onClick: () => navigator.clipboard.writeText("jakwesoneilgonzalez@gmail.com"),
       titleClassName: "text-xl text-center text-blue-50 font-semibold",
-      resumeLink:"/Resume-GONZALEZ,JacquesOneil.pdf",
+      resumeLink:"/GONZALEZ-JACQUES_ONEIL-RESUME.pdf",
     },
   ];
   
