@@ -163,15 +163,36 @@ export const navItems = [
   ];
 
 
-export const cards = [
-  {
-    id: "lana-del-rey",
-    title: "Summertime Sadness",
-    description: "Lana Del Rey",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: `Lana Del Rey is celebrated for her melancholic and cinematic style...`,
-  },
+export const projs = [
+   {
+      id: 1,
+      title: "Web Pet Adoption Application for Dog Lovers",
+      description: "Manage your pet adoption with a web application using JS and PHP.",
+      src: "/p1.png",
+      projText: "Visit",
+      projLink: "https://github.com/jakwesoneil/SanaShelter_dogadoptionphp",
+      content: `Blahblah proper names`,
+    },
+
+    {
+      id: 2,
+      title: "Android Pomodoro Timer Application ",
+      description: "Boost your productivity with an android pomodoro timer application using Flutter. ",
+      src: "/p2.png",
+      iconLists: ["/flutter.svg"],
+      projText: "Visit",
+      projLink: "https://play.google.com/store/apps/details?id=com.application.slimodoro",
+      content: `Blahblah proper names`,
+    },
+    
+    {
+      id: 3,
+      title: "Web CMS for 3D Virtual Labs",
+      description: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
+      src: "/p3.png",
+      projText: "Visit",
+      projLink: "https://bgvlabs.com",
+      content: `Blahblah proper names`, 
+    },
   // Add more cards as needed
 ];

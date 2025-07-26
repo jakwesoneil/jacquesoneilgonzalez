@@ -1,80 +1,161 @@
-
 "use client";
-import dynamic from "next/dynamic";
-import { projects } from "@/data";
-import React, { useState } from "react";
-import { FaLocationArrow } from "react-icons/fa";
-import ProjectGalleryModal from "./ui/ProjectGalleryModal";
 
-const PinContainer = dynamic(
-  () => import("./ui/3d-pin").then((mod) => mod.PinContainer),
-  { ssr: false }
-);
+import React, { useEffect, useId, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useOutsideClick } from "../hooks/UseOutsideClick";
+import { projs } from "../data"; // ✅ Import from your data file
 
-const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
+type ProjectType = (typeof projs)[number];
+
+export function GridExpandableCard() {
+  const [active, setActive] = useState<ProjectType | null>(null);
+  const id = useId();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActive(null);
+    };
+    if (active) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
+
+  useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="py-20" id="projects">
-      <h1 className="heading">
-        A small collection of my{" "}
-        <span className="text-yellow-400">projects</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
-            onClick={() => setSelectedProject(project)}
-          >
-            <PinContainer title={project.link} href="#projects">
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <img src="./bg.png" alt="bg-img" />
-                </div>
-                <img src={project.img} alt={project.title} className="z-10 absolute inset-0 m-auto" />
-              </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {project.title}
-              </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
-                {project.des}
-              </p>
+    <>
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/20 h-full w-full z-10"
+          />
+        )}
+      </AnimatePresence>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {project.iconLists.map((icon, index) => (
-                    <div
-                      key={icon}
-                      className="border border-white/[0.2] rounded-full lg:w-10 w-8 h-8 flex justify-center items-center"
-                      style={{ transform: `translateX(-${1 * index * 2}px)` }}
-                    >
-                      <img src={icon} alt={icon} className="p-2" />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-yellow-400">
-                    View Gallery
-                  </p>
-                  <FaLocationArrow className="ms-3 text-yellow-400" />
-                </div>
+      <AnimatePresence>
+        {active && (
+          <div className="fixed inset-0 grid place-items-center z-[100]">
+            <motion.button
+              key={`button-${active.title}-${id}`}
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.05 } }}
+              className="absolute top-2 right-2 lg:hidden bg-white rounded-full h-6 w-6 flex items-center justify-center"
+              onClick={() => setActive(null)}
+            >
+              <CloseIcon />
+            </motion.button>
+
+            <motion.div
+              layoutId={`proj-${active.title}-${id}`}
+              ref={ref}
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-blue-900 sm:rounded-3xl overflow-hidden"
+            >
+              <motion.div layoutId={`image-${active.title}-${id}`}>
+                <img
+                  src={active.src}
+                  alt={active.title}
+                  className="w-full h-80 object-cover"
+                />
+              </motion.div>
+              <div className="p-4">
+                <motion.h3
+                  layoutId={`title-${active.title}-${id}`}
+                  className="text-base font-medium text-blue-800 dark:text-neutral-200"
+                >
+                  {active.title}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${active.description}-${id}`}
+                  className="text-base text-neutral-600 dark:text-neutral-400"
+                >
+                  {active.description}
+                </motion.p>
+
+                <motion.a
+                  layout
+                  href={active.projLink}
+                  target="_blank"
+                  className="mt-4 inline-block px-4 py-2 bg-green-500 text-white text-sm font-bold rounded-full"
+                >
+                  {active.projText}
+                </motion.a>
+
+                <motion.div
+                  className="mt-4 text-sm text-neutral-600 dark:text-neutral-400 max-h-40 overflow-auto"
+                  layout
+                >
+                  {active.content}
+                </motion.div>
               </div>
-            </PinContainer>
+            </motion.div>
           </div>
+        )}
+      </AnimatePresence>
+
+      <ul
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto w-full "
+        id="projects"
+      >
+        {projs.map((proj) => (
+          <motion.div
+            key={proj.id}
+            layoutId={`card-${proj.title}-${id}`}
+            onClick={() => setActive(proj)}
+            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+          >
+            <motion.div layoutId={`image-${proj.title}-${id}`}>
+              <img
+                src={proj.src}
+                alt={proj.title}
+                className="h-60 w-full object-cover rounded-lg"
+              />
+            </motion.div>
+            <div className="text-center mt-2">
+              <motion.h3
+                layoutId={`title-${proj.title}-${id}`}
+                className="text-base font-medium text-neutral-800 dark:text-neutral-200"
+              >
+                {proj.title}
+              </motion.h3>
+              <motion.p
+                layoutId={`description-${proj.description}-${id}`}
+                className="text-base text-neutral-600 dark:text-neutral-400"
+              >
+                {proj.description}
+              </motion.p>
+            </div>
+          </motion.div>
         ))}
-      </div>
-
-      {selectedProject && (
-        <ProjectGalleryModal
-          isOpen={!!selectedProject}
-          onClose={() => setSelectedProject(null)}
-          images={[selectedProject.img, ...(selectedProject.gallery || [])]}
-          title={selectedProject.title}
-        />
-      )}
-    </div>
+      </ul>
+    </>
   );
-};
+}
 
-export default Projects;
+export const CloseIcon = () => (
+  <motion.svg
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0, transition: { duration: 0.05 } }}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-4 w-4 text-black"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M18 6l-12 12" />
+    <path d="M6 6l12 12" />
+  </motion.svg>
+);
