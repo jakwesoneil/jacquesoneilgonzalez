@@ -71,70 +71,34 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "Web CMS for 3D Virtual Labs",
-      des: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
-      img: "/p1.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
-      link: "https://bgvlabs.com",
-    },
-    {
-      id: 2,
-      title: "Web Centralized Vendor Management Repository",
-      des: "Manage Vendors with a web application using React, Tailwind, and, Springboot.",
-      img: "p2.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/git.svg"],
-      link: "https://github.com/jakwesoneil/gvendor",
-    },
-    {
-      id: 3,
-      title: "Android Pomodoro Timer Application ",
-      des: "Boost your productivity with an android pomodoro timer application using Flutter. ",
-      img: "/p3.png",
-      iconLists: ["/flutter.svg"],
-      link: "https://play.google.com/store/apps/details?id=com.application.slimodoro",
-    },
-    {
-      id: 4,
       title: "Web Pet Adoption Application for Dog Lovers",
       des: "Manage your pet adoption with a web application using JS and PHP.",
-      img: "/p4.png",
+      img: "/p1.png",
       iconLists: ["/js.svg", "/php.svg", "/git.svg"],
       link: "https://github.com/jakwesoneil/SanaShelter_dogadoptionphp",
+      gallery: ["/re.svg", "/tail.svg", "/ts.svg"]
+    },
+
+    {
+      id: 2,
+      title: "Android Pomodoro Timer Application ",
+      des: "Boost your productivity with an android pomodoro timer application using Flutter. ",
+      img: "/p2.png",
+      iconLists: ["/flutter.svg"],
+      link: "https://play.google.com/store/apps/details?id=com.application.slimodoro",
+      gallery: ["/re.svg", "/tail.svg", "/ts.svg"]
     },
     
-  ];
-  
-  export const feedbacks = [
     {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
+      id: 3,
+      title: "Web CMS for 3D Virtual Labs",
+      des: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
+      img: "/p3.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
+      link: "https://bgvlabs.com",
+      gallery: ["/re.svg", "/tail.svg", "/ts.svg"]
     },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
+    
   ];
   
   export const companies = [
@@ -154,22 +118,29 @@ export const navItems = [
     {
       id: 1,
       title:  "Security Researcher Intern",
-      desc: "Developed a PoC for an open-source SIEM, achieving a potential $50,000 cost reduction annually by implementing it in AWS using Linux commands, enhancing log tracking and security event analysis.",
       className: "md:col-span-2",
       thumbnail: "/e1.svg",
       icon:["/aws.svg","/linux.svg"],
       companyName: "Globe Telecom",
-      skill:["Software Implementation"]
+      skill:["4/2024 - 7/2024"]
     },
     {
       id: 2,
       title: "Digital Technology Intern",
-      desc: "Integrated 20 automated test cases using Java and maintained an application framework recording using XPath.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/e2.svg",
       icon:["/java.svg","/xpath.svg"],
       companyName: "McDo Philippines",
-      skill:["Testing","Automation"]
+      skill:["9/2024 - 12/2024"]
+    },
+        {
+      id: 3,
+      title:  "Cloud Operations Jr. Associate",
+      className: "md:col-span-2",
+      thumbnail: "/e3.png",
+      icon:["/aws.svg","/linux.svg"],
+      companyName: "WTW",
+      skill:["5/2025 - Present"]
     },
   ];
   
@@ -190,3 +161,17 @@ export const navItems = [
       target:"mailto:jakwesoneilgonzalez@gmail.com?subject=Let's%20get%20in%20touch&body=Hi,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
     },
   ];
+
+
+export const cards = [
+  {
+    id: "lana-del-rey",
+    title: "Summertime Sadness",
+    description: "Lana Del Rey",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: `Lana Del Rey is celebrated for her melancholic and cinematic style...`,
+  },
+  // Add more cards as needed
+];

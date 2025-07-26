@@ -63,11 +63,6 @@ const Experience = () => {
                 </div>
               </div>
 
-              {/* Description */}
-              <p className="text-start text-white mt-4 font-medium text-xs">
-                {card.desc}
-              </p>
-
               {/* Technologies Used */}
               {card.icon && card.icon.length > 0 && (
                 <div className="mt-5 flex flex-col items-center">

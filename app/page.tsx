@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import { navItems } from "@/data";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
+import { GridExpandableCard } from "@/components/ui/gridExpandableCard";
 
 export default function Home() {
   
@@ -20,6 +21,7 @@ export default function Home() {
         <Grid/>
         <Projects/>
         <Experience/>
+        <GridExpandableCard/>
         <Footer/>
       </div>
     </main>

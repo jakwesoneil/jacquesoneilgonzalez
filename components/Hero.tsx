@@ -32,7 +32,7 @@ const Hero = () => {
           "relative dark:text-neutral-50 items-center flex space-x-1 text-blue-50 dark:hover:text-yellow-400 hover:text-yellow-400"
         )}
       >
-        <span className="text-lg">{navItem.name}</span> {/* Only the icon */}
+        <span className="text-sm !cursor-pointer">{navItem.name}</span> {/* Only the icon */}
       </Link>
     ))}
     <div className="pr-1" />
