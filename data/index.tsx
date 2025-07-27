@@ -1,9 +1,12 @@
-export const navItems = [
-    { name: "About", link: "#about" },
-    { name: "Projects", link: "#projects" },
-    { name: "Experience", link: "#experience"},
-    { name: "Contact", link: "#contact" },
-  ];
+import { FaUser, FaCode, FaBriefcase, FaEnvelope } from "react-icons/fa";
+
+export const navBarItems = [
+  { title: "About", icon: <FaUser />, href: "#about" },
+  { title: "Projects", icon: <FaCode />, href: "#projects" },
+  { title: "Experience", icon: <FaBriefcase />, href: "#experience" },
+  { title: "Contact", icon: <FaEnvelope />, href: "#contact" },
+];
+
   
   export const gridItems = [
     {

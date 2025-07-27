@@ -3,7 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/UseOutsideClick";
-import { projs } from "../data"; // ✅ Import from your data file
+import { projs } from "../data";
 
 type ProjectType = (typeof projs)[number];
 
@@ -26,6 +26,7 @@ export function GridExpandableCard() {
 
   return (
     <>
+    
       <AnimatePresence>
         {active && (
           <motion.div
@@ -46,7 +47,7 @@ export function GridExpandableCard() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="absolute top-2 right-2 lg:hidden bg-white rounded-full h-6 w-6 flex items-center justify-center"
+              className="absolute top-2 right-2 lg:hidden bg-blue-900 rounded-full h-6 w-6 flex items-center justify-center"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -55,7 +56,7 @@ export function GridExpandableCard() {
             <motion.div
               layoutId={`proj-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-blue-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-blue-950 sm:rounded-3xl overflow-hidden border border-blue-50 dark:border-blue-100"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -67,13 +68,13 @@ export function GridExpandableCard() {
               <div className="p-4">
                 <motion.h3
                   layoutId={`title-${active.title}-${id}`}
-                  className="text-base font-medium text-blue-800 dark:text-neutral-200"
+                  className="text-base font-semibold text-blue-950 dark:text-yellow-400"
                 >
                   {active.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${active.description}-${id}`}
-                  className="text-base text-neutral-600 dark:text-neutral-400"
+                  className="text-sm text-blue-800 dark:text-blue-100"
                 >
                   {active.description}
                 </motion.p>
@@ -82,13 +83,13 @@ export function GridExpandableCard() {
                   layout
                   href={active.projLink}
                   target="_blank"
-                  className="mt-4 inline-block px-4 py-2 bg-green-500 text-white text-sm font-bold rounded-full"
+                  className="mt-4 inline-block px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
                 >
                   {active.projText}
                 </motion.a>
 
                 <motion.div
-                  className="mt-4 text-sm text-neutral-600 dark:text-neutral-400 max-h-40 overflow-auto"
+                  className="mt-4 text-sm text-blue-800 dark:text-blue-100 max-h-40 overflow-auto"
                   layout
                 >
                   {active.content}
@@ -99,16 +100,21 @@ export function GridExpandableCard() {
         )}
       </AnimatePresence>
 
+      <section className="py-1 w-full" id="projects"></section>
+        <h1 className="heading py-20 ">
+        My{" "}
+        <span className="text-yellow-400">projects</span>
+      </h1>
       <ul
         className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto w-full "
-        id="projects"
+        id="projects" 
       >
         {projs.map((proj) => (
           <motion.div
             key={proj.id}
             layoutId={`card-${proj.title}-${id}`}
             onClick={() => setActive(proj)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col bg-white dark:bg-blue-950 hover:ring-2 hover:ring-yellow-400 hover:shadow-lg rounded-md transition-all"
           >
             <motion.div layoutId={`image-${proj.title}-${id}`}>
               <img
