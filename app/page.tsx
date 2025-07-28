@@ -1,7 +1,8 @@
 import Hero from "@/components/Hero";
 import { navBarItems } from "../data";
 import Footer from "@/components/Footer";
-import { GridExpandableCard } from "@/components/Projects";
+import { Certifications } from "@/components/Certifications";
+import { Projects } from "@/components/Projects";
 import { FloatingDock } from "@/components/ui/flocking-dock";
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingDock items={navBarItems} desktopClassName="fixed bottom-6 left-1/2 -translate-x-1/2 z-50" />
         <Hero />
-        <GridExpandableCard />
+        <Certifications/>
+        <Projects />
         <Footer />
       </div>
     </main>

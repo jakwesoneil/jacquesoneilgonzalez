@@ -7,7 +7,7 @@ import { projs } from "../data";
 
 type ProjectType = (typeof projs)[number];
 
-export function GridExpandableCard() {
+export function Projects() {
   const [active, setActive] = useState<ProjectType | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
@@ -105,41 +105,43 @@ export function GridExpandableCard() {
         My{" "}
         <span className="text-yellow-400">projects</span>
       </h1>
-      <ul
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto w-full "
-        id="projects" 
-      >
-        {projs.map((proj) => (
-          <motion.div
-            key={proj.id}
-            layoutId={`card-${proj.title}-${id}`}
-            onClick={() => setActive(proj)}
-            className="p-4 flex flex-col bg-white dark:bg-blue-950 hover:ring-2 hover:ring-yellow-400 hover:shadow-lg rounded-md transition-all"
-          >
-            <motion.div layoutId={`image-${proj.title}-${id}`}>
-              <img
-                src={proj.src}
-                alt={proj.title}
-                className="h-60 w-full object-cover rounded-lg"
-              />
+      <div className="w-full max-w-7xl mx-auto px-4"> {/* 📌 Added a wider container */}
+        <ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full" // 📌 Adjust grid layout here
+          id="projects"
+        >
+          {projs.map((proj) => (
+            <motion.div
+              key={proj.id}
+              layoutId={`card-${proj.title}-${id}`}
+              onClick={() => setActive(proj)}
+              className="p-4 flex flex-col bg-transparent dark:transparent hover:ring-2 hover:ring-yellow-400 hover:shadow-lg rounded-md transition-all"
+            >
+              <motion.div layoutId={`image-${proj.title}-${id}`}>
+                <img
+                  src={proj.src}
+                  alt={proj.title}
+                  className="h-60 w-full object-cover rounded-lg"
+                />
+              </motion.div>
+              <div className="text-center mt-2">
+                <motion.h3
+                  layoutId={`title-${proj.title}-${id}`}
+                  className="text-base font-medium text-blue-50 dark:text-neutral-200"
+                >
+                  {proj.title}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${proj.description}-${id}`}
+                  className="text-base text-blue-50 dark:text-neutral-400"
+                >
+                  {proj.description}
+                </motion.p>
+              </div>
             </motion.div>
-            <div className="text-center mt-2">
-              <motion.h3
-                layoutId={`title-${proj.title}-${id}`}
-                className="text-base font-medium text-neutral-800 dark:text-neutral-200"
-              >
-                {proj.title}
-              </motion.h3>
-              <motion.p
-                layoutId={`description-${proj.description}-${id}`}
-                className="text-base text-neutral-600 dark:text-neutral-400"
-              >
-                {proj.description}
-              </motion.p>
-            </div>
-          </motion.div>
-        ))}
-      </ul>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }

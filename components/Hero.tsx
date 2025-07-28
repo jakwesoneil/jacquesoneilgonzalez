@@ -31,10 +31,14 @@ const Hero = () => {
           >
             I&apos;m Jacques Oneil Gonzalez, driven by a passion for creating seamless web and mobile experiences.
           </p>
-          <a href = '#projects'>
+          <a
+            href="/GONZALEZ-JACQUES_ONEIL-RESUME.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MagicButton 
-              title="Show my Projects"
-              icon ={<FaLocationArrow/>}
+              title="Show my Resume"
+              icon={<FaLocationArrow />}
               position="right"
             />
           </a>
