@@ -54,7 +54,7 @@ export function Projects() {
                   className="w-full h-80 object-cover"
                 />
               </motion.div>
-              <div className="p-4">
+              <div className="p-4 text-center">
                 <motion.h3
                   layoutId={`title-${active.title}-${id}`}
                   className="text-base font-semibold text-blue-950 dark:text-yellow-400"
@@ -72,7 +72,7 @@ export function Projects() {
                   layout
                   href={active.projLink}
                   target="_blank"
-                  className=" mt-4 inline-block px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition justify-center"
+                   className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
                 >
                   {active.projText}
                 </motion.a>

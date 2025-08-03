@@ -45,7 +45,10 @@ export function Certifications() {
               ref={ref}
               className="w-full max-w-[500px] rounded-[25px] h-fit max-h-[90%] flex flex-col bg-white dark:bg-blue-950 sm:rounded-3xl overflow-hidden border border-blue-50 dark:border-blue-100"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`} className="h-[120px] flex justify-center items-center bg-white dark:bg-blue-950">
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="h-[120px] flex justify-center items-center bg-white dark:bg-blue-950"
+              >
                 <div className="h-[120px] w-auto">
                   <img
                     src={active.src}
@@ -54,7 +57,7 @@ export function Certifications() {
                   />
                 </div>
               </motion.div>
-              <div className="p-4">
+              <div className="p-4 text-center">
                 <motion.h3
                   layoutId={`title-${active.title}-${id}`}
                   className="text-base font-semibold text-blue-950 dark:text-yellow-400"
@@ -72,17 +75,25 @@ export function Certifications() {
                   layout
                   href={active.certLink}
                   target="_blank"
-                  className="mt-4 inline-block px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
+                  className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
                 >
                   {active.certText}
                 </motion.a>
 
                 <motion.div
-                  className="mt-4 text-sm text-blue-800 dark:text-blue-100 max-h-40 overflow-auto"
+                  className="mt-4 flex flex-wrap justify-center gap-2 max-h-40 overflow-auto"
                   layout
                 >
-                  {active.content}
+                  {active.skills.map((skill: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-xs font-semibold rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </motion.div>
+
               </div>
             </motion.div>
           </div>
@@ -94,10 +105,7 @@ export function Certifications() {
         My <span className="text-yellow-400">certifications</span>
       </h1>
       <div className="w-full max-w-7xl mx-auto px-4">
-        <ul
-          id="certs"
-          className="flex flex-wrap justify-center gap-6 w-full"
-        >
+        <ul id="certs" className="flex flex-wrap justify-center gap-6 w-full">
           {[...certs].reverse().map((cert) => (
             <motion.div
               key={cert.id}

@@ -12,12 +12,21 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
   export const certs = [
     {
       id: 1,
+      title: "TOEIC Listening and Reading",
+      description: "English proficiency certification.",
+      src: "https://www.makaitalia.com/wp-content/uploads/2017/03/logo-toeic-transparent1.png",
+      certLink: "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+      certText: "View Certification",
+      skills: ["Microsoft Azure", "Cloud"],
+    },
+    {
+      id: 2,
       title: "Microsoft Azure Fundamentals",
       description: "Fundamentals of Azure services and cloud architecture.",
-      content: "This certification validates foundational Azure knowledge.",
       src: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
       certLink: "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
       certText: "View Certification",
+      skills: ["Microsoft Azure", "Cloud"],
     },
   ];
 
