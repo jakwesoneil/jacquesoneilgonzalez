@@ -68,15 +68,6 @@ export function Projects() {
                   {active.description}
                 </motion.p>
 
-                <motion.a
-                  layout
-                  href={active.projLink}
-                  target="_blank"
-                   className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
-                >
-                  {active.projText}
-                </motion.a>
-
                 <motion.div
                 className="mt-4 flex flex-wrap justify-center gap-2 max-h-40 overflow-auto"
                 layout
@@ -89,7 +80,16 @@ export function Projects() {
                         {skill}
                        </span>
                     ))}
-                  </motion.div>
+                </motion.div>
+
+                <motion.a
+                  layout
+                  href={active.projLink}
+                  target="_blank"
+                   className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
+                >
+                  {active.projText}
+                </motion.a>
               </div>
             </motion.div>
           </div>
@@ -140,19 +140,26 @@ export function Projects() {
                 </motion.p>
                 <motion.div
                 layout
-                className="mt-2 flex flex-wrap justify-center gap-1"
+                className={`mt-2 flex flex-wrap justify-center gap-1 transition-opacity duration-300 ${
+                  proj.id === active?.id ? "opacity-0" : "opacity-100"
+                }`}
               >
                 {proj.skills?.map((skill, index) => (
                   <motion.span
                     key={index}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded-full"
+                    className={`text-xs px-2 py-1 rounded-full transition-all duration-300 ${
+                      proj.id === active?.id
+                        ? "bg-transparent text-transparent"
+                        : "bg-yellow-500/10 text-yellow-400"
+                    }`}
                   >
                     {skill}
                   </motion.span>
                 ))}
               </motion.div>
+
               </div>
             </motion.div>
           ))}

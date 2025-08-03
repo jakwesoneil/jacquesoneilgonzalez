@@ -71,15 +71,6 @@ export function Certifications() {
                   {active.description}
                 </motion.p>
 
-                <motion.a
-                  layout
-                  href={active.certLink}
-                  target="_blank"
-                  className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
-                >
-                  {active.certText}
-                </motion.a>
-
                 <motion.div
                   className="mt-4 flex flex-wrap justify-center gap-2 max-h-40 overflow-auto"
                   layout
@@ -93,6 +84,15 @@ export function Certifications() {
                     </span>
                   ))}
                 </motion.div>
+
+                <motion.a
+                  layout
+                  href={active.certLink}
+                  target="_blank"
+                  className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
+                >
+                  {active.certText}
+                </motion.a>
 
               </div>
             </motion.div>
