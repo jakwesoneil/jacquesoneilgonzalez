@@ -18,18 +18,18 @@ const Hero = () => {
         lg:max-w-[60vw] flex flex-col items-center justify-center"
         >
           <h3 className="text-blue-100 uppercase tracking-widest text-xs text-center max-w-80">
-            Aspiring Software Engineer
+            Cloud Operations Junior Associate
           </h3>
 
           <TextGenerateEffect
             className="text-center text-[40px] text-5xl lg:text-6xl text-blue-100 dark:text-blue-100"
-            words="Creating Seamless User Experiences"
+            words="Code for the Cloud"
           />
           <p
             className="text-center text-blue-100 dark:text-blue-100
             md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-3"
           >
-            I&apos;m Jacques Oneil Gonzalez, driven by a passion for creating seamless web and mobile experiences.
+            I&apos;m Jacques Oneil Gonzalez, driven by a passion on innovating on mobile and cloud applications.
           </p>
           <a
             href="/GONZALEZ-JACQUES_ONEIL-RESUME.pdf"
