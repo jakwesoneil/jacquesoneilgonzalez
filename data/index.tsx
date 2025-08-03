@@ -8,6 +8,27 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
     { title: "Publications", icon: <FaBookOpen />, href: "#publications" },
     { title: "Contact", icon: <FaEnvelope />, href: "#contact" },
   ]; 
+  export const infos = [
+    {
+      quote: "Finished a Bachelors Degree on Information Technology.",
+      name: "Mapúa University",
+      designation: "Student",
+      src: "/toga.jpeg",
+    },
+    {
+      quote: "Volunteered at meetups, and helped organize events to help students who are interested in learning Kubernetes.",
+      name: "K8sUG Philippines",
+      designation: "Volunteer",
+      src: "/jake.jpg",
+    },
+    {
+      quote:
+        "Currently working on a 24x7 shifting schedule, managing cloud infrastructure and ensuring system reliability.",
+      name: "Willis Towers Watson",
+      designation: "Cloud Operations Junior Associate",
+      src: "/jakwesoneil_logo.png",
+    },
+  ];
   
   export const certs = [
     {
