@@ -78,11 +78,18 @@ export function Projects() {
                 </motion.a>
 
                 <motion.div
-                  className="mt-4 text-sm text-blue-800 dark:text-blue-100 max-h-40 overflow-auto"
-                  layout
-                >
-                  {active.content}
-                </motion.div>
+                className="mt-4 flex flex-wrap justify-center gap-2 max-h-40 overflow-auto"
+                layout
+                      >
+                      {active.skills.map((skill: string, index: number) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-xs font-semibold rounded-full"
+                        >
+                        {skill}
+                       </span>
+                    ))}
+                  </motion.div>
               </div>
             </motion.div>
           </div>
@@ -131,6 +138,21 @@ export function Projects() {
                 >
                   {proj.description}
                 </motion.p>
+                <motion.div
+                layout
+                className="mt-2 flex flex-wrap justify-center gap-1"
+              >
+                {proj.skills?.map((skill, index) => (
+                  <motion.span
+                    key={index}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded-full"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </motion.div>
               </div>
             </motion.div>
           ))}

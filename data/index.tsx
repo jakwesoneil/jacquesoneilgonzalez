@@ -10,23 +10,23 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
   ]; 
   export const infos = [
     {
-      quote: "Finished a Bachelors Degree on Information Technology.",
+      quote: "Finished a Bachelors Degree on Information Technology with a specialization on Application Development.",
       name: "Mapúa University",
       designation: "Student",
-      src: "/toga.jpeg",
+      src: "/am1.jpeg",
     },
     {
       quote: "Volunteered at meetups, and helped organize events to help students who are interested in learning Kubernetes.",
       name: "K8sUG Philippines",
       designation: "Volunteer",
-      src: "/jake.jpg",
+      src: "/am2.jpg",
     },
     {
       quote:
         "Currently working on a 24x7 shifting schedule, managing cloud infrastructure and ensuring system reliability.",
       name: "Willis Towers Watson",
       designation: "Cloud Operations Junior Associate",
-      src: "/jakwesoneil_logo.png",
+      src: "/am3.jpg",
     },
   ];
   
@@ -59,7 +59,7 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
       src: "/p1.png",
       projText: "Visit",
       projLink: "https://github.com/jakwesoneil/SanaShelter_dogadoptionphp",
-      content: `Blahblah proper names`,
+      skills:["JavaScript", "PHP"],
     },
 
     {
@@ -69,8 +69,8 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
       src: "/p2.png",
       iconLists: ["/flutter.svg"],
       projText: "Visit",
-      projLink: "https://play.google.com/store/apps/details?id=com.application.slimodoro",
-      content: `Blahblah proper names`,
+      projLink: "https://github.com/jakwesoneil/slimodoro",
+      skills:["Flutter"],
     },
       
     {
@@ -79,17 +79,17 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
       description: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
       src: "/p3.png",
       projText: "Visit",
-      projLink: "https://bgvlabs.com",
-      content: `Blahblah proper names`, 
+      projLink: "https://github.com/jakwesoneil/bgv-frontend",
+      skills: ["React", "Tailwind", "Typescript"],
     },
     {
       id: 4,
       title: "BossPaCheque",
-      description: "Learn Machine Shop Training with a web application using React, Tailwind, and, Laravel.",
+      description: "Clean and format CSV files for easy data management using React Native and Tailwind",
       src: "/p4.png",
       projText: "Visit",
-      projLink: "https://bgvlabs.com",
-      content: `Blahblah proper names`, 
+      projLink: "https://github.com/JaiLayos/BossPaCheque",
+      skills: ["React Native", "Tailwind", "Python"], 
     },
   ];
   
