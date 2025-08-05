@@ -76,10 +76,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
       const gap = isMobile() ? 4 : 8;
       const scrollPosition = (cardWidth + gap) * (index + 1); // ← no +1 here
-      /*carouselRef.current.scrollTo({
-        //left: scrollPosition,
+      carouselRef.current.scrollTo({
+        left: scrollPosition,
         behavior: "smooth",
-      });*/
+      });
       setCurrentIndex(index);
     }
   };
@@ -240,8 +240,10 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.position}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900"
-      >
+        className={cn("relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900",
+          currentIndex === index && "ring-4 ring-yellow-400"
+        )}
+          >
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
           <motion.p
