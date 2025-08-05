@@ -76,10 +76,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
       const gap = isMobile() ? 4 : 8;
       const scrollPosition = (cardWidth + gap) * (index + 1); // ← no +1 here
-      /*carouselRef.current.scrollTo({
-        //left: scrollPosition,
+      carouselRef.current.scrollTo({
+        left: scrollPosition,
         behavior: "smooth",
-      });*/
+      });
       setCurrentIndex(index);
     }
   };
