@@ -2,6 +2,7 @@ import { navBarItems } from "../data";
 import { FloatingDock } from "@/components/ui/flocking-dock";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
+import Experience from "@/components/Experience"
 import { Certifications } from "@/components/Certifications";
 import { Projects } from "@/components/Projects";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
         <FloatingDock items={navBarItems} desktopClassName="fixed bottom-6 left-1/2 -translate-x-1/2 z-50" />
         <Hero />
         <AboutMe />
+        <Experience />
         <Certifications/>
         <Projects />
         <Footer />
