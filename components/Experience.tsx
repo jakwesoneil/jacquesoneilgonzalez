@@ -7,7 +7,7 @@ export default function Experience() {
   const cards = [...exps]
     .reverse()
     .map((exp, index) => {
-      let contentNode: React.ReactNode = null;
+      const contentNode: React.ReactNode = null;
 
       return (
         <Card
