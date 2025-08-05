@@ -1,4 +1,6 @@
+import React from "react";
 import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } from "react-icons/fa";
+import { start } from "repl";
 
   export const navBarItems = [
     { title: "About", icon: <FaUser />, href: "#about" },
@@ -28,6 +30,31 @@ import { FaUser, FaBriefcase, FaCertificate, FaCode, FaBookOpen, FaEnvelope } fr
       designation: "Cloud Operations Junior Associate",
       src: "/am3.jpg",
     },
+  ];
+
+  export const exps = [
+  {
+    company: "Globe Telecom",
+    position: "Security Researcher Intern",
+    src: "ex1.jpg",
+    startDate: "April 2024",
+    endDate: "July 2024",
+  },
+  {
+    company: "McDonald's Philippines",
+    position: "Digital Technology Intern",
+    src: "ex2.png",
+    startDate: "September 2024",
+    endDate: "December 2024",
+  },
+    {
+    company: "WTW",
+    position: "Cloud Operations Junior Associate",
+    src: "ex3.jpg",
+    startDate: "May 2025",
+    endDate: "Present",
+  },
+
   ];
   
   export const certs = [

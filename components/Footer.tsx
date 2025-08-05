@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center justify-center pt-10 px-4 text-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Let&apos;s create <span className="text-yellow-400"> meaningful</span> experiences!
+          Reach <span className="text-yellow-400"> out</span>
         </h1>
         {socialMedia.map((info) => (
           info.id === 3 && (
