@@ -32,7 +32,7 @@ const Hero = () => {
             I&apos;m Jacques Oneil Gonzalez, driven by a passion on innovating on mobile and cloud applications.
           </p>
           <a
-            href="/GONZALEZ-JACQUES_ONEIL-RESUME.pdf"
+            href="/CV-GONZALEZ,JacquesOneil.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

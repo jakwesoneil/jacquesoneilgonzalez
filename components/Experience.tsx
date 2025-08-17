@@ -25,7 +25,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-10">
       <h2 className="heading text-center mb-10">
-        Working <span className="text-yellow-400">Experience</span>
+        My <span className="text-yellow-400">Experience</span>
       </h2>
       <div className="w-full h-full py-6">
         <Carousel items={cards} />

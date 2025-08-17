@@ -23,6 +23,7 @@ interface CarouselProps {
 
 type Card = {
   src: string;
+  logo:string,
   position: string;
   company: string;
   content: React.ReactNode;
@@ -73,18 +74,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
-      const gap = isMobile() ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1); // ← no +1 here
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
       setCurrentIndex(index);
     }
-  };
-  const isMobile = () => {
-    return window && window.innerWidth < 768;
   };
 
   return (
@@ -204,7 +195,7 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              className="fixed inset-0 h-full w-full bg-black/80"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -212,7 +203,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.position}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+              className="relative z-[60] mx-auto my-10 h-fit max-w-2xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
             >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
@@ -222,13 +213,13 @@ export const Card = ({
               </button>
               <motion.p
                 layoutId={layout ? `company-${card.position}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-md font-medium text-black dark:text-white"
               >
                 {card.company}
               </motion.p>
               <motion.p
                 layoutId={layout ? `position-${card.position}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+                className="mt-4 text-xl font-semibold text-neutral-700 md:text-2xl dark:text-white"
               >
                 {card.position}
               </motion.p>
@@ -246,15 +237,26 @@ export const Card = ({
           >
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
-          <motion.p
+
+          <motion.div
             layoutId={layout ? `company-${card.company}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
+            className="flex items-center gap-2"
           >
-            {card.company}
-          </motion.p>
+            <div className="flex h-7 w-7 sm:h-7 sm:w-7 items-center justify-center rounded-sm bg-white">
+              <img
+                src={card.logo}
+                alt={`${card.company} logo`}
+                className="h-7 w-7 object-contain"
+              />
+            </div>
+            <span className="font-sans text-sm font-medium text-white md:text-2xl">
+              {card.company}
+            </span>
+          </motion.div>
+
           <motion.p
             layoutId={layout ? `position-${card.position}` : undefined}
-            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
+            className="mt-2 max-w-xs text-left font-sans text-md font-semibold [text-wrap:balance] text-white md:text-xl"
           >
             {card.position}
           </motion.p>
@@ -290,7 +292,7 @@ export const BlurImage = ({
     <img
       className={cn(
         "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
+        isLoading ? "inset-0" : "blur-0",
         className,
       )}
       onLoad={() => setLoading(false)}

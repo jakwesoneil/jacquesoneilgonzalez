@@ -1,148 +1,67 @@
 "use client";
 
-import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "../hooks/UseOutsideClick";
+import React from "react";
+import { motion } from "framer-motion";
 import { certs } from "../data";
 
-type CertType = (typeof certs)[number];
-
 export function Certifications() {
-  const [active, setActive] = useState<CertType | null>(null);
-  const id = useId();
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActive(null);
-    };
-    if (active) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [active]);
-
-  useOutsideClick(ref, () => setActive(null));
-
   return (
-    <>
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-10"
-          />
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {active && (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.div
-              layoutId={`cert-${active.title}-${id}`}
-              ref={ref}
-              className="w-full max-w-[500px] rounded-[25px] h-fit max-h-[90%] flex flex-col bg-white dark:bg-blue-950 sm:rounded-3xl overflow-hidden border border-blue-50 dark:border-blue-100"
-            >
-              <motion.div
-                layoutId={`image-${active.title}-${id}`}
-                className="h-[120px] flex justify-center items-center bg-white dark:bg-blue-950"
-              >
-                <div className="h-[120px] w-auto">
-                  <img
-                    src={active.src}
-                    alt={active.title}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </motion.div>
-              <div className="p-4 text-center">
-                <motion.h3
-                  layoutId={`title-${active.title}-${id}`}
-                  className="text-base font-semibold text-blue-950 dark:text-yellow-400"
-                >
-                  {active.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${active.description}-${id}`}
-                  className="text-sm text-blue-800 dark:text-blue-100"
-                >
-                  {active.description}
-                </motion.p>
-
-                <motion.div
-                  className="mt-4 flex flex-wrap justify-center gap-2 max-h-40 overflow-auto"
-                  layout
-                >
-                  {active.skills.map((skill: string, index: number) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-xs font-semibold rounded-full"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </motion.div>
-
-                <motion.a
-                  layout
-                  href={active.certLink}
-                  target="_blank"
-                  className="mt-4 block w-fit mx-auto px-4 py-2 bg-blue-950 text-yellow-400 text-sm font-bold rounded-md transition"
-                >
-                  {active.certText}
-                </motion.a>
-
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
-      <section className="py-1 w-full" id="certifications"></section>
-      <h1 className="heading py-10">
-        My <span className="text-yellow-400">certifications</span>
+    <section id="certifications" className="py-10 w-full">
+      <h1 className="heading text-center mb-10">
+        My <span className="text-yellow-400">Certifications</span>
       </h1>
-      <div className="w-full max-w-7xl mx-auto px-4">
-        <ul id="certs" className="flex flex-wrap justify-center gap-6 w-full">
-          {[...certs].reverse().map((cert) => (
-            <motion.div
-              key={cert.id}
-              layoutId={`card-${cert.title}-${id}`}
-              onClick={() => setActive(cert)}
-              className="p-4 flex flex-col bg-transparent hover:ring-2 hover:ring-yellow-400 hover:shadow-lg rounded-md transition-all max-w-sm w-full"
-            >
-              <motion.div
-                layoutId={`image-${cert.title}-${id}`}
-                className="h-[120px] w-full flex items-center justify-center rounded-lg bg-transparent"
-              >
-                <div className="h-[120px] w-auto">
-                  <img
-                    src={cert.src}
-                    alt={cert.title}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </motion.div>
-              <div className="text-center mt-2">
-                <motion.h3
-                  layoutId={`title-${cert.title}-${id}`}
-                  className="text-base font-medium text-blue-50 dark:text-neutral-200"
-                >
+
+      <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+        {[...certs].reverse().map((cert) => (
+          <motion.div
+            key={cert.id}
+            whileHover={{ scale: 1.02 }}
+            className="flex flex-row items-stretch bg-white dark:bg-blue-950 shadow-md rounded-xl p-6"
+          >
+            
+            <div className="flex flex-col justify-between w-2/3">
+              <div>
+                <h3 className="text-sm sm:text-base font-bold text-blue-900 dark:text-yellow-400 mb-2 truncate">
                   {cert.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${cert.description}-${id}`}
-                  className="text-base text-blue-50 dark:text-neutral-400"
-                >
-                  {cert.description}
-                </motion.p>
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-blue-100">
+                  <span className="font-semibold">Date Taken:</span> {cert.dateTaken}
+                </p>
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-blue-100">
+                  <span className="font-semibold">Status:</span>{" "}
+                  <span
+                    className={
+                      cert.status === "Active"
+                        ? "text-green-600 dark:text-green-400 font-semibold"
+                        : "text-red-600 dark:text-red-400 font-semibold"
+                    }
+                  >
+                    {cert.status}
+                  </span>
+                </p>
               </div>
-            </motion.div>
-          ))}
-        </ul>
+
+              <a
+                href={cert.certLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-4 py-2 bg-blue-950 text-yellow-400 text-xs sm:text-sm font-semibold rounded-md hover:bg-blue-900 transition w-fit"
+              >
+                View Certification
+              </a>
+            </div>
+
+            <div className="flex items-center justify-center w-1/3">
+              <img
+                src={cert.certsrc}
+                alt={cert.title}
+                className="h-20 sm:h-24 w-auto object-contain"
+              />
+            </div>
+          </motion.div>
+
+        ))}
       </div>
-    </>
+    </section>
   );
 }

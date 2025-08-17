@@ -35,21 +35,24 @@ import { start } from "repl";
   export const exps = [
   {
     company: "Globe Telecom",
+    logo: "e1.svg",
     position: "Security Researcher Intern",
     src: "exp1.jpg",
-    startDate: "April 2024",
-    endDate: "July 2024",
+    startDate: "Apr 2024",
+    endDate: "Jul 2024",
   },
   {
-    company: "McDonald's Philippines",
-    position: "Digital Technology Intern",
+    company: "McDo Philippines",
+    logo: "e2.svg",    
+    position: "QA Intern",
     src: "exp2.png",
-    startDate: "September 2024",
-    endDate: "December 2024",
+    startDate: "Sep 2024",
+    endDate: "Dec 2024",
   },
     {
     company: "WTW",
-    position: "Cloud Operations Junior Associate",
+    logo: "e3.png",
+    position: "Cloud Ops Jr. Associate",
     src: "exp3.jpg",
     startDate: "May 2025",
     endDate: "Present",
@@ -61,20 +64,22 @@ import { start } from "repl";
     {
       id: 1,
       title: "TOEIC Listening and Reading",
-      description: "English proficiency certification.",
-      src: "https://www.makaitalia.com/wp-content/uploads/2017/03/logo-toeic-transparent1.png",
-      certLink: "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
-      certText: "View Certification",
-      skills: ["Microsoft Azure", "Cloud"],
+      dateTaken: "March 2024",
+      status: "Active",
+      certsrc: "https://www.makaitalia.com/wp-content/uploads/2017/03/logo-toeic-transparent1.png",
+      certLink:
+        "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+     
     },
     {
       id: 2,
       title: "Microsoft Azure Fundamentals",
-      description: "Fundamentals of Azure services and cloud architecture.",
-      src: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
-      certLink: "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
-      certText: "View Certification",
-      skills: ["Microsoft Azure", "Cloud"],
+      dateTaken: "June 2024",
+      status: "Active",
+      certsrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+      certLink:
+        "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+      
     },
   ];
 
