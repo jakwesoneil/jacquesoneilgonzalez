@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { certs } from "../data";
+import Image from "next/image";
 
 export function Certifications() {
   return (
@@ -52,7 +53,7 @@ export function Certifications() {
             </div>
 
             <div className="flex items-center justify-center w-1/3">
-              <img
+              <Image
                 src={cert.certsrc}
                 alt={cert.title}
                 className="h-20 sm:h-24 w-auto object-contain"

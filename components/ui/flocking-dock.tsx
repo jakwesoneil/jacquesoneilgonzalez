@@ -16,6 +16,7 @@ import {
 } from "framer-motion";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 export const FloatingDock = ({
   items,
@@ -78,7 +79,7 @@ export const FloatingDockMobile = ({
         className="h-10 w-10 rounded-md overflow-hidden bg-blue-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 shadow-md"
         aria-label="Toggle Menu"
       >
-        <img
+        <Image
           src="/jakwesoneil_logo.png"
           alt="Logo"
           className="h-full w-full object-cover"
@@ -105,7 +106,7 @@ const FloatingDockDesktop = ({
         className,
       )}
     >
-      <img
+      <Image
         src="/jakwesoneil_logo.png"
         alt="Logo"
         className="h-10 w-10 object-contain rounded-md"

@@ -16,12 +16,12 @@ const Hero = () => {
         lg:max-w-[60vw] flex flex-col items-center justify-center"
         >
           <h3 className="text-blue-100 uppercase tracking-widest text-xs text-center max-w-80">
-            Cloud Operations Junior Associate
+            IT Professional
           </h3>
 
           <TextGenerateEffect
             className="text-center text-[40px] text-5xl lg:text-6xl text-blue-100 dark:text-blue-100"
-            words="Code for the Cloud"
+            words=""
           />
           <p
             className="text-center text-blue-100 dark:text-blue-100

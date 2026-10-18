@@ -13,7 +13,7 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ImageProps } from "next/image";
+import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/UseOutsideClick"
 
 interface CarouselProps {
@@ -243,7 +243,7 @@ export const Card = ({
             className="flex items-center gap-2"
           >
             <div className="flex h-7 w-7 sm:h-7 sm:w-7 items-center justify-center rounded-sm bg-white">
-              <img
+              <Image
                 src={card.logo}
                 alt={`${card.company} logo`}
                 className="h-7 w-7 object-contain"
@@ -289,7 +289,7 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <img
+    <Image
       className={cn(
         "h-full w-full transition duration-300",
         isLoading ? "inset-0" : "blur-0",

@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/UseOutsideClick";
 import { projs } from "../data";
+import Image from "next/image";
 
 type ProjectType = (typeof projs)[number];
 
@@ -48,7 +49,7 @@ export function Projects() {
             >
 
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
+                <Image
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 object-cover"
@@ -118,7 +119,7 @@ export function Projects() {
               className="h-30 w-full flex items-center justify-center rounded-lg bg-transparent"
             >
               <div className="h-[120px] w-auto">
-                <img
+                <Image
                   src={proj.src}
                   alt={proj.title}
                   className="h-full w-auto object-contain"

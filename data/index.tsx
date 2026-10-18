@@ -63,17 +63,24 @@ import { start } from "repl";
       certsrc: "https://www.makaitalia.com/wp-content/uploads/2017/03/logo-toeic-transparent1.png",
       certLink:
         "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
-     
     },
     {
       id: 2,
       title: "Microsoft Azure Fundamentals",
-      dateTaken: "June 2024",
+      dateTaken: "June 2025",
       status: "Active",
       certsrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
       certLink:
         "https://learn.microsoft.com/en-us/users/jacquesoneilgonzalez-7554/credentials/bea2b9fbbdc516d3?ref=https%3A%2F%2Fwww.linkedin.com%2F",
-      
+    },
+    {
+      id: 3,
+      title: "Microsoft Azure AI Fundamentals",
+      dateTaken: "September 2026",
+      status: "Active",
+      certsrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+      certLink:
+      "https://learn.microsoft.com/api/credentials/share/en-us/JacquesOneilGonzalez-7554/C55D0D655ACD21A9?sharingId=4D98DCCBA38EAA42"
     },
   ];
 
