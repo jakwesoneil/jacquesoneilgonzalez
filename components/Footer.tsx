@@ -3,7 +3,6 @@ import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa';
 import { socialMedia } from "../data";
 import { BackgroundBeams } from './ui/background-beams';
-import Image from 'next/image';
 
 
 const Footer = () => {

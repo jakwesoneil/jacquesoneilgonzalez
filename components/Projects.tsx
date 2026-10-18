@@ -4,7 +4,6 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/UseOutsideClick";
 import { projs } from "../data";
-import Image from "next/image";
 
 type ProjectType = (typeof projs)[number];
 
