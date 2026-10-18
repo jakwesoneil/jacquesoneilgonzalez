@@ -1,8 +1,6 @@
 import React from "react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import MagicButton from "./ui/MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
