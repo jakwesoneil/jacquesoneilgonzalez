@@ -49,7 +49,7 @@ export function Projects() {
             >
 
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
+                <img
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 object-cover"
@@ -119,7 +119,7 @@ export function Projects() {
               className="h-30 w-full flex items-center justify-center rounded-lg bg-transparent"
             >
               <div className="h-[120px] w-auto">
-                <Image
+                <img
                   src={proj.src}
                   alt={proj.title}
                   className="h-full w-auto object-contain"

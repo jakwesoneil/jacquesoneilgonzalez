@@ -243,7 +243,7 @@ export const Card = ({
             className="flex items-center gap-2"
           >
             <div className="flex h-7 w-7 sm:h-7 sm:w-7 items-center justify-center rounded-sm bg-white">
-              <Image
+              <img
                 src={card.logo}
                 alt={`${card.company} logo`}
                 className="h-7 w-7 object-contain"
@@ -289,7 +289,7 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <Image
+    <img
       className={cn(
         "h-full w-full transition duration-300",
         isLoading ? "inset-0" : "blur-0",

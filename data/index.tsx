@@ -10,6 +10,9 @@ import { start } from "repl";
     { title: "Publications", icon: <FaBookOpen />, href: "#publications" },
     { title: "Contact", icon: <FaEnvelope />, href: "#contact" },
   ]; 
+  export const linkTo = [
+    { url: "https://www.linkedin.com/in/jacquesoneilgonzalez"}
+  ]
   export const infos = [
     {
       quote: "Finished a Bachelors Degree on Information Technology with a specialization on Application Development.",
@@ -168,7 +171,7 @@ import { start } from "repl";
       skill:["5/2025 - Present"]
     },
   ];
-  
+
   export const socialMedia = [
     {
       id: 1,

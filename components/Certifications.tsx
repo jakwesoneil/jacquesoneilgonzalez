@@ -53,7 +53,7 @@ export function Certifications() {
             </div>
 
             <div className="flex items-center justify-center w-1/3">
-              <Image
+              <img
                 src={cert.certsrc}
                 alt={cert.title}
                 className="h-20 sm:h-24 w-auto object-contain"
