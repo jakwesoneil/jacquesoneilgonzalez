@@ -16,18 +16,18 @@ const Hero = () => {
         lg:max-w-[60vw] flex flex-col items-center justify-center"
         >
           <h3 className="text-blue-100 uppercase tracking-widest text-xs text-center max-w-80">
-            IT Professional
+            Jacques Oneil Gonzalez
           </h3>
 
           <TextGenerateEffect
             className="text-center text-[40px] text-5xl lg:text-6xl text-blue-100 dark:text-blue-100"
-            words=""
+            words="IT Professional"
           />
           <p
             className="text-center text-blue-100 dark:text-blue-100
             md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-3"
           >
-            I&apos;m Jacques Oneil Gonzalez, driven by a passion on innovating on mobile and cloud applications.
+            Focused on cloud infrastructure and building reliable IT systems.
           </p>
         </div>
       </div>
